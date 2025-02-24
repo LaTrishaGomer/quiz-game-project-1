@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --border-radius: 100px;
+    --dark-purple: #330068;
+    --medium-purple: #400082;
+    --light-purple: #9747FF;
+    --icy-blue: #37E2D5;
+    --teal: #05A7B6;
+    --orange: #FF3D00;
+    --yellow: #FFCD38;
+    --white: #ffffff;
+    --black: #000000;
+    --off-black: #1D1D1D;
+    --grey: #E7E7E7;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #330068;
+    
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Slackey", serif;
+    color: #37E2D5;
+    font-size: 150px;
+    line-height: 87%;
+    text-align: center;
+    margin: 0px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+h5 {
+font-family: "Montserrat", serif;
+font-weight: 700;
+font-size: 26px;
+text-transform: uppercase;
+color: #fff;
+
+}
+
+p {
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    color: #fff;       
+}
