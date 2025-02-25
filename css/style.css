@@ -208,7 +208,10 @@ img {
 }
 
 
-
+#categories {
+    background-color: var(--medium-purple);
+    padding: 117px 120px;
+}
 
 
 
