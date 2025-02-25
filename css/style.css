@@ -79,7 +79,7 @@ h4 {
     text-transform: uppercase;
     text-align: center;
     color: var(--white);
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--black);
 }
 
@@ -107,6 +107,7 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+
 
 #button-large {
     border: 4px solid var(--black);
@@ -258,4 +259,42 @@ footer {
     color: var(--white);
     background-color: var(--black);
     font-family: var(--second-family);
+}
+
+/* QUIZ PAGE STYLES */
+
+#quiz-nav {
+    background-color: var(--medium-purple);
+}
+
+.quiz-question-container {
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--light-purple);
+    border-radius: var(--border-radius);
+    border: 5px solid var(--black);
+    width: 1200px;
+    height: 733px;
+}
+
+#question-background {
+    background-color: var(--medium-purple);
+    display: flex;
+    justify-content: center;
+    padding: 117px 120px;
+}
+
+.quiz-category-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.quiz-image {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
