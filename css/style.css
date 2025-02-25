@@ -212,9 +212,20 @@ img {
     background-color: var(--medium-purple);
     background-image: url("/imgs/categories-bg-design.png");
     background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 117px 120px;
 }
 
+.categories-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 36px;
+    padding: 35px 64px;
+}
 
 
 
