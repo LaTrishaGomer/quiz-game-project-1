@@ -206,3 +206,23 @@ img {
 .hero-mtv {
     margin-bottom: 80%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    padding: 40px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+    font-family: "Montserrat", serif;
+}
