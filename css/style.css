@@ -156,3 +156,13 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.hero {
+    background: url("/imgs/main-hero-bg.png") no-repeat center center/cover;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
