@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+    --border-radius: 20px;
+    --font-family: "Slackey", serif;
+    --second-family: "Montserrat", serif;
     --dark-purple: #330068;
     --medium-purple: #400082;
     --light-purple: #9747FF;
@@ -34,7 +37,7 @@ h3 {
 }
 
 h1 {
-    font-family: "Slackey", serif;
+    font-family: var(--font-family);
     color: var(--icy-blue);
     font-size: 150px;
     line-height: 87%;
@@ -46,7 +49,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Slackey", serif;
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 80px;
     line-height: 114%;
@@ -59,7 +62,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Slackey", serif;
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 40px;
     line-height: 123%;
@@ -69,7 +72,7 @@ h3 {
 }
 
 h4 {
-    font-family: "Slackey", serif;
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 35px;
     letter-spacing: -0.02em;
@@ -82,7 +85,7 @@ h4 {
 
 
 h5 {
-    font-family: "Montserrat", serif;
+    font-family: var(--second-family);
     font-weight: 700;
     font-size: 26px;
     text-transform: uppercase;
@@ -91,7 +94,7 @@ h5 {
 }
 
 p {
-    font-family: "Montserrat", serif;
+    font-family: var(--second-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 162%;
@@ -116,7 +119,7 @@ nav {
 }
 
 a.button-large {
-    font-family: "Montserrat", serif;
+    font-family: var(--second-family);
     font-weight: 700;
     font-size: 16px;
     line-height: 162%;
@@ -138,7 +141,7 @@ a.button-large {
 }
 
 a.button-small {
-    font-family: "Montserrat", serif;
+    font-family: var(--second-family);
     font-weight: 700;
     font-size: 16px;
     line-height: 162%;
@@ -227,18 +230,32 @@ img {
     padding: 35px 64px;
 }
 
+#category-one {
+    background-color: var(--yellow);
+    border-radius: var(--border-radius);
+}
 
+#category-two {
+    background-color: var(--teal);
+    border-radius: var(--border-radius);
+}
 
+#category-three {
+    background-color: var(--light-purple);
+    border-radius: var(--border-radius);
+}
 
-
-
-
+img {
+    border-radius: var(--border-radius);
+}
 
 
 footer {
     padding: 40px;
     text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
     color: var(--white);
     background-color: var(--black);
-    font-family: "Montserrat", serif;
+    font-family: var(--second-family);
 }
