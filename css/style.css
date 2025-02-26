@@ -44,7 +44,7 @@ h1 {
     text-align: center;
     margin: 0px;
     text-transform: uppercase;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--black);
 }
 
@@ -188,7 +188,7 @@ img {
 }
 
 .hero-right {
-    right: 110px;
+    right: 180px;
 }
 
 .hero-cta {
@@ -356,6 +356,16 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding: 30px; 
+}
+
+.option.right {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.option.wrong {
+    background-color: var(--icy-blue);
+    color: var(--black);
 }
 
 .next {
