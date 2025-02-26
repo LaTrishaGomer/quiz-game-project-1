@@ -32,7 +32,6 @@ let score = 0;
 
 /*----- Cached Element References  -----*/
 
-const category = document.getElementById("category");
 const questionNumber = document.getElementById("quiz-question-count");
 const question = document.getElementById("question");
 const quizImg = document.querySelector("#quiz-image img");
@@ -71,6 +70,12 @@ function handleAnswerChoice(selectedIndex) {
     }
     nextButton.disabled = false;
     nextButton.style.display = "block";
+}
+
+function showResult() {
+    result.classList.remove("hide");
+    result.querySelector("#score").textContent = `${score} out of ${quizQuestions.length}`;
+    nextButton.style.display = "none";
 }
 
 /*----------- Event Listeners ----------*/
