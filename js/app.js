@@ -1,7 +1,8 @@
-/*-------------------------------- Design Credit: slabdsgn --------------------------------*/
+/*------------- Design Credit: slabdsgn -----------*/
 // Commercial License for Figma design file obtained via Envato Elements: https://elements.envato.com/fashion-fashion-landing-page-RCJUDKN
 
-//Photos & Assets: I do not own nor claim to own the rights to any images or photos shared in this class project
+/*------------- Photos & Image Assets ------------*/
+// I do not own nor claim to own the rights to any images or photos shared in this class project
 
 
 /*-------------- Constants -------------*/
@@ -42,16 +43,46 @@ const result = document.getElementById("result");
 /*-------------- Functions -------------*/
 
 function loadQuestion() {
-    const {question: currentQuestionText, image: imgSrc} = quizQuestions[currentQuestion];
+    const {question: currentQuestionText, options: possibleAnswers, image: imgSrc} = quizQuestions[currentQuestion];
     questionNumber.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
     question.textContent = currentQuestionText;
 
     quizImg.src = imgSrc;
+
+    possibleAnswers.forEach((answer, index) => {
+        options[index].textContent = answer;
+        options[index].classList.remove("correct", "incorrect");
+        options[index].onclick = () => handleAnswerChoice(index);
+});
+
+nextButton.disabled = true;
+nextButton.style.display = "none";
+
 }
 
-
+function handleAnswerChoice(selectedIndex) {
+    const correctAnswerIndex = quizQuestions[currentQuestion].correctAnswer;
+    if (selectedIndex === correctAnswerIndex) {
+        options[selectedIndex].classList.add("correct");
+        score++;
+    } else {
+        options[selectedIndex].classList.add("incorrect");
+        options[correctAnswerIndex].classList.add("correct");
+    }
+    nextButton.disabled = false;
+    nextButton.style.display = "block";
+}
 
 /*----------- Event Listeners ----------*/
+nextButton.addEventListener("click", () => {
+    currentQuestion++;
+    if(currentQuestion < quizQuestions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+});
+
 
 
 loadQuestion();
