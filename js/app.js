@@ -34,15 +34,25 @@ let score = 0;
 const category = document.getElementById("category");
 const questionNumber = document.getElementById("quiz-question-count");
 const question = document.getElementById("question");
-const image = document.getElementById("quiz-image");
+const quizImg = document.querySelector("#quiz-image img");
 const options = document.querySelectorAll(".option");
 const nextButton = document.getElementById("next-button");
 const result = document.getElementById("result");
 
 /*-------------- Functions -------------*/
 
+function loadQuestion() {
+    const {question: currentQuestionText, image: imgSrc} = quizQuestions[currentQuestion];
+    questionNumber.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+    question.textContent = currentQuestionText;
+
+    quizImg.src = imgSrc;
+}
+
 
 
 /*----------- Event Listeners ----------*/
 
+
+loadQuestion();
 
