@@ -10,7 +10,7 @@
 
 /*-------------- Constants -------------*/
 
-const quizQuestions = [
+const quizQuestions80s = [
     {
         question: "What was the name of the fictional HBCU where A Different World was set?",
         image: "imgs/q1-80s-different-world.jpg",
@@ -108,6 +108,3 @@ nextButton.addEventListener("click", () => {
 
 loadQuestion();
 
-
-console.log("Testing: Is nextButton null?");
-console.log(nextButton);
