@@ -1,7 +1,7 @@
-/*------------- Design Credit: slabdsgn -----------*/
+/*------------- Design Credit: slabdsgn via Envato Elements -----------*/
 // Commercial License for Figma design file obtained via Envato Elements: https://elements.envato.com/fashion-fashion-landing-page-RCJUDKN
 
-/*------------- Design Credit: slabdsgn -----------*/
+/*------------- Audio Credit: Envato Elements -----------*/
 //Commercial License for all sound effects obtained via Envato Elements
 
 /*------------- Photos & Image Assets ------------*/
@@ -14,6 +14,7 @@ const quizQuestions = [
     {
         question: "What was the name of the fictional HBCU where A Different World was set?",
         image: "imgs/q1-80s-different-world.jpg",
+        altText: "Cast of TV show A Different World",
         options:["Hillman College", "Howard University","Herbert College", "Douglas College"],
         correctAnswer: 0
     },
@@ -21,6 +22,7 @@ const quizQuestions = [
     {
         question: "What is the name of this popular Nintendo video game?",
         image: "imgs/q2-80s-duck-hunt.jpg",
+        altText: "Screenshot of Duck Hunt video game",
         options:["Duck Tails", "Duck Hunt", "Donald The Duck", "Duck Adventures"],
         correctAnswer: 1
     }
@@ -49,11 +51,12 @@ const resultSound = new Audio("/imgs/score-result.mp3");
 /*-------------- Functions -------------*/
 
 function loadQuestion() {
-    const {question: currentQuestionText, options: possibleAnswers, image: imgSrc} = quizQuestions[currentQuestion];
+    const {question: currentQuestionText, options: possibleAnswers, image: imgSrc, altText} = quizQuestions[currentQuestion];
     questionNumber.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
     question.textContent = currentQuestionText;
 
     quizImg.src = imgSrc;
+    quizImg.alt = altText;
 
     possibleAnswers.forEach((answer, index) => {
         options[index].textContent = answer;
@@ -104,4 +107,3 @@ nextButton.addEventListener("click", () => {
 
 
 loadQuestion();
-
