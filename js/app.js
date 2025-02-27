@@ -87,7 +87,7 @@ function showResult() {
     result.classList.remove("hide");
     result.querySelector("#score").textContent = `${score} out of ${quizQuestions.length}`;
     resultSound.volume = .075;
-    resultSoundSound.play();
+    resultSound.play();
     nextButton.style.display = "none";
 }
 
