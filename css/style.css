@@ -315,6 +315,7 @@ footer {
     position: relative;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 #question {
@@ -334,13 +335,13 @@ footer {
     background-color: var(--medium-purple);
     border-radius: 10px;
     padding: 10px 10px;
-    width: 220px;
-    height: 56px;
+    width: 400px;
+    height: 66px;
     border: 3px solid var(--black);
     color: var(--white);
     font-family: var(--second-family);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 162%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -355,9 +356,9 @@ footer {
 
 .options {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .option.incorrect {
