@@ -107,3 +107,7 @@ nextButton.addEventListener("click", () => {
 
 
 loadQuestion();
+
+
+console.log("Testing: Is nextButton null?");
+console.log(nextButton);
