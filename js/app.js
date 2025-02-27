@@ -1,6 +1,9 @@
 /*------------- Design Credit: slabdsgn -----------*/
 // Commercial License for Figma design file obtained via Envato Elements: https://elements.envato.com/fashion-fashion-landing-page-RCJUDKN
 
+/*------------- Design Credit: slabdsgn -----------*/
+//Commercial License for all sound effects obtained via Envato Elements
+
 /*------------- Photos & Image Assets ------------*/
 // I do not own nor claim to own the rights to any images or photos shared in this class project
 
@@ -38,6 +41,10 @@ const quizImg = document.querySelector("#quiz-image img");
 const options = document.querySelectorAll(".option");
 const nextButton = document.getElementById("next-button");
 const result = document.getElementById("result");
+const correctAnswerSound = new Audio("/imgs/right-answer-sound.wav");
+const incorrectAnswersound = new Audio("/imgs/wrong-answer-sound.mp3");
+const resultSound = new Audio("/imgs/score-result.mp3");
+
 
 /*-------------- Functions -------------*/
 
@@ -64,9 +71,13 @@ function handleAnswerChoice(selectedIndex) {
     if (selectedIndex === correctAnswerIndex) {
         options[selectedIndex].classList.add("correct");
         score++;
+        correctAnswerSound.volume = .075;
+        correctAnswerSound.play();
     } else {
         options[selectedIndex].classList.add("incorrect");
         options[correctAnswerIndex].classList.add("correct");
+        incorrectAnswersound.volume = .075;
+        incorrectAnswersound.play();
     }
     nextButton.disabled = false;
     nextButton.style.display = "block";
@@ -75,6 +86,8 @@ function handleAnswerChoice(selectedIndex) {
 function showResult() {
     result.classList.remove("hide");
     result.querySelector("#score").textContent = `${score} out of ${quizQuestions.length}`;
+    resultSound.volume = .075;
+    resultSoundSound.play();
     nextButton.style.display = "none";
 }
 
