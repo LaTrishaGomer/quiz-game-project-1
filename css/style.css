@@ -320,13 +320,13 @@ footer {
 
 #question {
     font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 35px;
-    letter-spacing: -0.02em;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: -2px;
     text-transform: uppercase;
     text-align: center;
     color: var(--white);
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--black);
 }
 
