@@ -7,8 +7,8 @@
     <title>WayBackQuiz</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/imgs/hero-90s.png" type="image/x-icon">
-    <!-- <script defer src="/js/questions.js"></script> -->
-    <script defer src="/js/app.js"></script>
+    <!-- <script type="module" defer src="/js/questions.js"></script>
+    <script type="module" defer src="/js/app.js"></script> -->
 </head>
 
 <body>
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="hero-button">
-                    <button id="button-large">
+                    <button id="button-large">  // not best practice... style anchor tag //
                         <a href="#categories" class="button-large">What's your best era?</a>
                     </button>
                 </div>
@@ -89,7 +89,7 @@
                         <figure>
                             <img src="imgs/categories-pacman-2.gif" width="472" height="228" alt="PacMan characters">
                         </figure>
-                        <button id="button-small">
+                        <button id="button-small"> //style this to look like a button instead of wrapping in button// 
                             <a href="/quizone.html" target="_blank" class="button-small">Start Quiz</a>
                         </button>
                     </div>
