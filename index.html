@@ -9,6 +9,7 @@
     <link rel="icon" href="/imgs/hero-90s.png" type="image/x-icon">
     <!-- <script type="module" defer src="/js/questions.js"></script>
     <script type="module" defer src="/js/app.js"></script> -->
+    <script type="module" src="/js/app.js"></script>
 </head>
 
 <body>
@@ -17,9 +18,7 @@
             <a href="/index.html">
                 <img src="/imgs/logo.png" alt="WayBackQuiz home" width="207" height="28" />
             </a>
-            <button id="button-small">
-                <a href="#categories" class="button-small">Start New Quiz</a>
-            </button>
+            <a href="#categories" class="button-small">Start New Quiz</a>
         </nav>
     </header>
 
@@ -61,9 +60,7 @@
                 </div>
 
                 <div class="hero-button">
-                    <button id="button-large">  // not best practice... style anchor tag //
-                        <a href="#categories" class="button-large">What's your best era?</a>
-                    </button>
+                    <a href="#categories" class="button-large">What's your best era?</a>
                 </div>
             </div>
 
@@ -89,9 +86,7 @@
                         <figure>
                             <img src="imgs/categories-pacman-2.gif" width="472" height="228" alt="PacMan characters">
                         </figure>
-                        <button id="button-small"> //style this to look like a button instead of wrapping in button// 
-                            <a href="/quizone.html" target="_blank" class="button-small">Start Quiz</a>
-                        </button>
+                        <button class="button-small" onclick="startQuiz('80s')">Start Quiz</button>
                     </div>
                 </article>
             </section>
@@ -107,9 +102,7 @@
                             <img src="imgs/categories-rollerblade-2.gif" width="472" height="228"
                                 alt="Bright colored rollerblades">
                         </figure>
-                        <button id="button-small">
-                            <a href="/" class="button-small">Start Quiz</a>
-                        </button>
+                        <button class="button-small" onclick="startQuiz('90s')">Start Quiz</button>
                     </div>
                 </article>
             </section>
@@ -125,9 +118,7 @@
                             <img src="/imgs/categories-y2k-loading-2.gif" width="472" height="228"
                                 alt="2000s vibes loading image">
                         </figure>
-                        <button id="button-small">
-                            <a href="/" class="button-small">Start Quiz</a>
-                        </button>
+                        <button class="button-small" onclick="startQuiz('Y2K')">Start Quiz</button>
                     </div>
                 </article>
             </section>
