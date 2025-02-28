@@ -30,9 +30,9 @@ const choices = document.querySelectorAll(".option");
 const nextButton = document.getElementById("next-button");
 const result = document.getElementById("result");
 
-const correctAnswerSound = new Audio("/imgs/right-answer-sound.wav");
-const incorrectAnswerSound = new Audio("/imgs/wrong-answer-sound.mp3");
-const resultSound = new Audio("/imgs/score-result.mp3");
+const correctAnswerSound = new Audio("imgs/right-answer-sound.wav");
+const incorrectAnswerSound = new Audio("imgs/wrong-answer-sound.mp3");
+const resultSound = new Audio("imgs/score-result.mp3");
 
 
 /*-------------- Functions -------------*/

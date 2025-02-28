@@ -162,7 +162,7 @@ img {
 }
 
 .hero {
-    background: url("/imgs/hero-main-bg.png") no-repeat center center/cover;
+    background: url("imgs/hero-main-bg.png") no-repeat center center/cover;
     display: flex;
     position: relative;
     align-items: center;
@@ -215,7 +215,7 @@ img {
 
 #categories {
     background-color: var(--medium-purple);
-    background-image: url("/imgs/categories-bg-design.png");
+    background-image: url("imgs/categories-bg-design.png");
     background-repeat: no-repeat;
     background-size: auto;
     display: flex;
