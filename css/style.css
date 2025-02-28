@@ -29,7 +29,6 @@
 body {
     margin: 0;
     background: var(--dark-purple);
-
 }
 
 h1,
@@ -44,7 +43,6 @@ h1 {
     font-size: 150px;
     line-height: 87%;
     text-align: center;
-    margin: 0px;
     text-transform: uppercase;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--black);
@@ -119,9 +117,6 @@ nav {
     height: 56px;
     background: var(--orange);
     position: absolute;
-}
-
-a.button-large {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 16px;
@@ -130,28 +125,28 @@ a.button-large {
     text-transform: uppercase;
     color: var(--white);
     text-decoration: none;
+    text-align: center;
+    cursor: pointer;
 }
+
 
 .button-small {
     background-color: var(--orange);
     border-radius: 10px;
-    padding: 8px 8px;
+    padding: 10px;
     width: 200px;
     height: 56px;
     border: 3px solid var(--black);
     color: var(--white);
-    font-weight: 500;
-}
-
-a.button-small {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 16px;
     line-height: 162%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--white);
     text-decoration: none;
+    text-align: center;
+    cursor: pointer;
 }
 
 .button-small:hover,
@@ -182,20 +177,20 @@ img {
 
 .hero-left,
 .hero-right {
-    display: flex;
     position: absolute;
-    flex-direction: column;
-    gap: 40px;
     top: 40%;
     transform: translateY(-50%);
+    width: auto;
+    max-width: 25%;
+    gap: 40px;
 }
 
 .hero-left {
-    left: 190px;
+    left: 0;
 }
 
 .hero-right {
-    right: 180px;
+    right: 0;
 }
 
 .hero-cta {
@@ -211,13 +206,12 @@ img {
 .retro-tv {
     position: absolute;
     margin-top: 27%;
-    margin-left: 50%;
+    margin-left: 60%;
 }
 
 .hero-mtv {
-    margin-bottom: 80%;
+    margin-bottom: 40%;
 }
-
 
 #categories {
     background-color: var(--medium-purple);
@@ -257,7 +251,6 @@ img {
     border-radius: var(--border-radius);
 }
 
-
 footer {
     padding: 40px;
     text-align: center;
@@ -267,8 +260,6 @@ footer {
     background-color: var(--black);
     font-family: var(--second-family);
 }
-
-/* QUIZ PAGE STYLES */
 
 #quiz-nav {
     background-color: var(--medium-purple);
@@ -282,7 +273,7 @@ footer {
     border-radius: var(--border-radius);
     border: 5px solid var(--black);
     width: 1200px;
-    height: 900px;
+    height: 1100px;
 }
 
 #question-background {
@@ -351,6 +342,7 @@ footer {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #next-button {
@@ -387,5 +379,80 @@ footer {
     display: none;
 }
 
+
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 70px;
+        margin-bottom: 180px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .hero-cta h5 {
+        margin-bottom: 5px;
+    }
+
+    .hero-text p {
+        margin-top: 5px;
+    }
+
+    .hero-left,
+    .hero-right {
+        display: none !important;
+    }
+
+    .hero-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        margin-top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .button-large {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        width: 50%;
+        transform: translateX(-50%);
+    }
+
+    .retro-tv {
+        display: block;
+        margin: 20px auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%;
+    }
+
+    nav .button-small {
+        display: none;
+    }
+
+    .categories-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 36px;
+        padding: 35px 64px;
+    }
+
+    .categories-container img {
+        max-width: 400px;
+    }
+}
 
 

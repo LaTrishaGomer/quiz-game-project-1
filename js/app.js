@@ -22,16 +22,16 @@ let quizQuestions = [];
 
 /*----- Cached Element References  -----*/
 
-const categoryDisplay = document.getElementById("category");
-const questionNumber = document.getElementById("quiz-question-count");
+
+const questionCounter = document.getElementById("quiz-question-count");
 const question = document.getElementById("question");
 const quizImg = document.querySelector("#quiz-image img");
-const options = document.querySelectorAll(".option");
+const choices = document.querySelectorAll(".option");
 const nextButton = document.getElementById("next-button");
 const result = document.getElementById("result");
 
 const correctAnswerSound = new Audio("/imgs/right-answer-sound.wav");
-const incorrectAnswersound = new Audio("/imgs/wrong-answer-sound.mp3");
+const incorrectAnswerSound = new Audio("/imgs/wrong-answer-sound.mp3");
 const resultSound = new Audio("/imgs/score-result.mp3");
 
 
@@ -56,29 +56,28 @@ document.addEventListener("DOMContentLoaded", () => {
             quizQuestions = quizQuestionsY2K;
         }
 
-        const categoryDisplay = document.getElementById("category");
-        if (categoryDisplay) {
-            categoryDisplay.textContent = `Category: ${category}`;
+        const categoryTitle = document.getElementById("category");
+        if (categoryTitle) {
+            categoryTitle.textContent = `Category: ${category}`;
         }
 
-        loadQuestion();
+        askTrivia();
     }
 });
 
 
-
-function loadQuestion() {
+function askTrivia() {
     const {question: currentQuestionText, options: possibleAnswers, image: imgSrc, altText} = quizQuestions[currentQuestion];
-    questionNumber.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+    questionCounter.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
     question.textContent = currentQuestionText;
 
     quizImg.src = imgSrc;
     quizImg.alt = altText;
 
     possibleAnswers.forEach((answer, index) => {
-        options[index].textContent = answer;
-        options[index].classList.remove("correct", "incorrect");
-        options[index].onclick = () => handleAnswerChoice(index);
+        choices[index].textContent = answer;
+        choices[index].classList.remove("correct", "incorrect");
+        choices[index].onclick = () => handleAnswerChoice(index);
 });
 
 nextButton.disabled = true;
@@ -89,15 +88,15 @@ nextButton.style.display = "none";
 function handleAnswerChoice(selectedIndex) {
     const correctAnswerIndex = quizQuestions[currentQuestion].correctAnswer;
     if (selectedIndex === correctAnswerIndex) {
-        options[selectedIndex].classList.add("correct");
+        choices[selectedIndex].classList.add("correct");
         score++;
         correctAnswerSound.volume = 1.0;
         correctAnswerSound.play();
     } else {
-        options[selectedIndex].classList.add("incorrect");
-        options[correctAnswerIndex].classList.add("correct");
-        incorrectAnswersound.volume = 1.0;
-        incorrectAnswersound.play();
+        choices[selectedIndex].classList.add("incorrect");
+        choices[correctAnswerIndex].classList.add("correct");
+        incorrectAnswerSound.volume = 1.0;
+        incorrectAnswerSound.play();
     }
     nextButton.disabled = false;
     nextButton.style.display = "block";
@@ -117,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nextButton.addEventListener("click", () => {
             currentQuestion++;
             if(currentQuestion < quizQuestions.length) {
-                loadQuestion();
+                askTrivia();
             } else {
                 showResult();
             }
