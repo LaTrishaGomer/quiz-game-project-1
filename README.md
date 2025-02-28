@@ -9,8 +9,8 @@ WayBackQuiz is a fun and nostalgic trivia game to test your knowledge of pop cul
 
 ## 🎯 How to Play
 1. **Select a category**: Choose between **Totally 80s, As If! The 90s, or Rewind to Y2K**.
-2. **Answer the trivia questions**: Each question includes an image, and you must select the correct answer from four options.
-3. **See your results**: At the end of the game, you will see your final score.
+2. **Answer the trivia questions**: Each question has an image, and you choose from four options.
+3. **See your results**: At the end of the game, you will see your quiz results.
 4. **Try again**: You can play again, or choose another category.
 
 ## 🚀 Live Demo
@@ -19,19 +19,18 @@ WayBackQuiz is a fun and nostalgic trivia game to test your knowledge of pop cul
 ## 🛠️ Technologies Used
 - **HTML**: Structured the game layout and elements.
 - **CSS**: Styled the game using Flexbox, Grid, and custom fonts.
-- **JavaScript**: Managed game logic, interactions, and dynamic content updates.
+- **JavaScript**: Managed game logic, interactions, and content updates.
 - **GitHub Pages**: Deployed and hosted the game.
 
-## 📝 Attributions
-- Trivia questions and images sourced from **public domain resources**. 
+## 📝 Sources & Credits
+- Trivia questions and images are from **public domain resources** and screenshots. 
 - I do not own or claim to own the rights to any of the photos used in this project.
-- Background images and icons from **Envato Elements**, **Canva**, and **Etsy**.
-- Sound effects from **Envato Elements**.
+- Background images and icons are from **Envato Elements**, **Canva**, and **Etsy**.
+- Sound effects are from **Envato Elements**.
 
 ## 🔮 Future Enhancements
-🔹 **Add a Timer**: Players must answer within a time limit.  
+🔹 **Add a Timer**: Players have to answer within a time limit.  
 🔹 **More Categories & Questions**: Expand to include **60s,70s** and other topics.  
-🔹 **Multiplayer Mode**: Compete with friends in real-time!  
 
 ---
 
