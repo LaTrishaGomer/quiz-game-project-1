@@ -20,7 +20,6 @@ WayBackQuiz is a fun and nostalgic trivia game to test your knowledge of pop cul
 - **HTML**: Structured the game layout and elements.
 - **CSS**: Styled the game using Flexbox, Grid, and custom fonts.
 - **JavaScript**: Managed game logic, interactions, and dynamic content updates.
-- **LocalStorage API**: Stored selected categories across pages.
 - **GitHub Pages**: Deployed and hosted the game.
 
 ## 📝 Attributions
